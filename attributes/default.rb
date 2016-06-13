@@ -1,5 +1,5 @@
 
-default['workstation']['homeshick_repos'] = {
+default['pantry-workstation']['homeshick_repos'] = {
   'dotfiles' => 'epcim/dotfiles',
   'dotvim' => 'epcim/dotvim',
   'dotshell' => 'epcim/dotshell',

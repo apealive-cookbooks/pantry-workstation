@@ -4,7 +4,7 @@
 
 home = node['platform_family'] == 'Darwin' ? '/Users' : '/home'
 
-node['workstation']['lang-packages'].each do |lang, packages|
+node['pantry-workstation']['lang-packages'].each do |lang, packages|
   case lang.split('-')[0]
   when 'python'
 
@@ -27,7 +27,7 @@ node['workstation']['lang-packages'].each do |lang, packages|
     end
 
     # virtualnevs to be created
-    node['workstation']['users'].each do |user|
+    node['pantry-workstation']['users'].each do |user|
       python_virtualenv "#{home}/#{user}/.pyenv/openstack"
 
       # python_virtualenv "#{home}/#{user}/.pyenv/default"
@@ -57,7 +57,7 @@ node['workstation']['lang-packages'].each do |lang, packages|
     include_recipe 'nodejs::npm'
     include_recipe 'nodejs::npm_packages'
 
-    # from workstation cookbook attributes
+    # from pantry-workstation cookbook attributes
     packages.each do |package|
       nodejs_npm package
     end

@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: workstation
+# Cookbook Name:: pantry-workstation
 # Recipe:: default
 #
 # Copyright (c) 2016 The Authors, All Rights Reserved.
@@ -7,11 +7,11 @@
 # include_recipe "homeshick"
 
 home = node['platform_family'] == 'Darwin' ? '/Users' : '/home'
-node['workstation']['users'].each do |user|
+node['pantry-workstation']['users'].each do |user|
   user_home = File.join(home, user)
 
   homeshick user do
-    keys node['workstation']['homeshick_repos']
+    keys node['pantry-workstation']['homeshick_repos']
     group user
     home user_home
     # FIXME: update is asking for ssh key passphrases interactively

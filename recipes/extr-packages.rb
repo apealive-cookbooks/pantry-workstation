@@ -7,7 +7,7 @@ when 'debian'
   dist = node.attribute?('lsb') ? node['lsb']['codename'] : 'notlinux'
   packages = []
 
-  case node['workstation']['external-packages']
+  case node['pantry-workstation']['external-packages']
   when 'authoring'
     apt_repository do
       uri 'ppa:neovim-ppa/unstable'
