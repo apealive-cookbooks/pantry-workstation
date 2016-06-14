@@ -49,6 +49,12 @@ node['pantry-workstation']['lang-packages'].each do |lang, packages|
           virtualenv "#{home}/#{user}/.pyenv/openstack"
         end
       end
+
+      # link .virtualnevs to .pyenv
+      link "#{home}/#{user}/.virtualenvs" do
+        to "#{home}/#{user}/.pyenv"
+      end
+
     end
 
   when 'npm'
