@@ -24,9 +24,10 @@ when 'debian'
       action :add
     end
     _packages.append %w(
-      salt-master
-      salt-minion
+      #salt-master
+      #salt-minion
       salt-ssh
+      salt-cloud
     )
   end
 

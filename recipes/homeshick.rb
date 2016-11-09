@@ -25,9 +25,9 @@ node['pantry-workstation']['users'].each do |user|
       #curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/bin/install | fish
 
       # zsh & zsh powerline theme
-      #homeshick clone --batch robbyrussell/oh-my-zsh
-      #homeshick clone --batch https://github.com/jeremyFreeAgent/oh-my-zsh-powerline-theme.git
-      #homeshick clone --batch https://github.com/seebi/dircolors-solarized
+      homeshick clone --batch robbyrussell/oh-my-zsh
+      homeshick clone --batch https://github.com/jeremyFreeAgent/oh-my-zsh-powerline-theme.git
+      homeshick clone --batch https://github.com/seebi/dircolors-solarized
 
       #homeshick link dotshell
       ln -s $HOME/.homesick/repos/oh-my-zsh-powerline-theme/powerline.zsh-theme $HOME/.oh-my-zsh/themes/
